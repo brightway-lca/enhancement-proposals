@@ -146,7 +146,7 @@ An important part of Brightway maturing is a formal decision making process for 
 Not all tasks can be done simultaneously. The follow chart shows the needed order of operations:
 
 ```mermaid
-  graph TD;
+  flowchart TD
 
   subgraph bw_calc
     A1 --> A2
@@ -164,13 +164,6 @@ Not all tasks can be done simultaneously. The follow chart shows the needed orde
   end
 
   B5 --> A5
-
-  subgraph projects
-    C1 --> C2
-    C2 --> C3
-  end
-
-  B5 --> projects
 
 ```
 
