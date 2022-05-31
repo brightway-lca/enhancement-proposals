@@ -7,8 +7,8 @@ Brightway 3 should have the following core libraries:
 * `bw_default_db` (name TBD; based on `bw2data`)
 * `bw_projects` (based on parts of `bw2data`)
 * `bw_calc` (based on `bw2calc`)
-* `bw_processing` (already done; docs and tests could be improved)
-* `matrix_utils` (already done; docs and tests could be improved)
+* `bw_processing` ([already done](https://github.com/brightway-lca/bw_processing); docs and tests could be improved)
+* `matrix_utils` ([already done](https://github.com/brightway-lca/matrix_utils); docs and tests could be improved)
 * `bw_io` (based on `bw2io`)
 * `bw_analysis` (based on `bw2analyzer`)
 
@@ -103,3 +103,16 @@ Specific tasks:
 
 * `bw_io` needs to to support the Brightway Common Database standard
 * `bw_io` strategies need to be rewritten to use the ported ILCD data standard internally. Probably it makes sense to first have a single wrapping decorator and then port individual strategies when possible.
+
+## Contributing
+
+A more decoupled organization of the Brightway 3 libraries should make (new) contributions easier.
+
+### Homogeneous contributing guidelines
+
+A "Brightway 3 Contributing guidelines" will be part of the documentation.
+Repositories of the Brightway 3 guidelines will point to this guidelines or have a customized version of it in the repository.
+
+### Homogeneous build, test and deploy metrics
+
+The repositories of code for Brightway 3 colre libraries will have the same building, deploying and testing infrastructure and badges on the README.
