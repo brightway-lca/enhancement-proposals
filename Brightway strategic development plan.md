@@ -107,7 +107,7 @@ Specific tasks:
 Nice-to-have:
 
 * E3 `bw_io` strategies rewritten to use the ported ILCD data standard internally
-* E4 Code audit of `bw_io`
+* E4 Code audit of `bw_io` for test coverage and strategy obsolescence
 
 ## Infrastructure
 
@@ -118,7 +118,7 @@ Documentation needs to be reworked and improved. A more decoupled organization o
 Specific tasks:
 
 * F1 Develop new Sphinx template with a [three column layout](https://github.com/Depart-de-Sentier/Prizes/issues/2#issuecomment-1077682124)
-* F2 Follow the [Diataxis framework](https://diataxis.fr/) for technical documentation
+* F2 Reorganize documentation following the [Diataxis framework](https://diataxis.fr/) for technical documentation
 * F3 Each notebook (where possible) should link to a *try.brightway.dev* container
 * F4 Develop, document, and test contribution guidelines and coding styles, and apply to all libraries
 
@@ -162,4 +162,43 @@ Not all tasks can be done simultaneously. The follow chart shows the needed orde
     B2 --> B5
     B5 --> B6
   end
+
+  B5 --> A5
+
+  subgraph projects
+    C1 --> C2
+    C2 --> C3
+  end
+
+  B5 --> projects
+
+  subgraph bw_data
+    D1 --> D2
+  end
+
+  common_api --> bw_data
+  B3 --> D2
+
+  subgraph bw_io
+    E1 --> E2
+    E1 --> E3
+    E4
+  end
+
+  subgraph docs
+    F1
+    F2 --> F3
+    F4
+  end
+
+  subgraph infrastructure
+    G1 --> G2
+  end
+
+  infrastructure --> bw_calc
+  infrastructure --> common_api
+  infrastructure --> bw_data
+  infrastructure --> bw_io
+
 ```
+
