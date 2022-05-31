@@ -172,33 +172,5 @@ Not all tasks can be done simultaneously. The follow chart shows the needed orde
 
   B5 --> projects
 
-  subgraph bw_data
-    D1 --> D2
-  end
-
-  common_api --> bw_data
-  B3 --> D2
-
-  subgraph bw_io
-    E1 --> E2
-    E1 --> E3
-    E4
-  end
-
-  subgraph docs
-    F1
-    F2 --> F3
-    F4
-  end
-
-  subgraph infrastructure
-    G1 --> G2
-  end
-
-  infrastructure --> bw_calc
-  infrastructure --> common_api
-  infrastructure --> bw_data
-  infrastructure --> bw_io
-
 ```
 
