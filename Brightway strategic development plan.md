@@ -22,37 +22,36 @@ Brightway 3 needs to satisfy these key user needs:
 
 This is already quite advanced. Specific tasks:
 
-* Updating `presamples` or porting concept of campaigns to another library (or `bw2data` calculation setups) to allow easier management of datapackages
-* Integrated documentation
-* Provide equivalent of `ComparativeMonteCarlo`
+* A1 Updating `presamples` or porting concept of campaigns to another library (or `bw2data` calculation setups) to allow easier management of datapackages
+* A2 Provide equivalent of `ComparativeMonteCarlo`
 
 Nice-to-have:
 
-* Standard report format for calculation results
-* Packaging/scripts (plus containerization) to easily get calculation running on web servers
-* Web API (e.g. Flask app) for running calculations
-* Provide support for multiple impact categories in one calculation
+* A3 Standard report format for calculation results
+* A4 Packaging/scripts (plus containerization) to easily get calculation running on web servers
+* A5 Web API (e.g. Flask app) for running calculations, with rate-limited implementation on DdS server
+* A6 Provide support and specification for multiple impact categories in one calculation (`MultiLCA`)
 
 ## Brightway Common Database API
 
 One big barrier to adapting Brightway to other databases is its tight coupling between projects, the default database backend, and the IO library. To decouple these, we first need to define *data formats*, *interfaces*, and *endpoints*.
 
-The interface is easy to define - we will use Python, with normal data structures, either built in or with [attrs](https://www.attrs.org/en/stable/index.html).
+The interface is easy to define - we will use Python, with normal data structures, either built in or with [attrs](https://www.attrs.org/en/stable/index.html) or similar.
 
-The data format will be [eILCD](https://eplca.jrc.ec.europa.eu/LCDN/developerILCDDataFormat.xhtml). eILCD is an XML format for life cycle inventory and impact category data. We are choosing eILCD instead of developing something on our own, or using another existing format, because:
+The data format will be [eILCD](https://eplca.jrc.ec.europa.eu/LCDN/developerILCDDataFormat.xhtml). eILCD is an XML format for life cycle inventory and impact category data. We are choosing eILCD instead of developing something on our own, or using a different existing format, because:
 
-* eILCD is the only format really battle tested with multiple implementations and use in a variiety of contexts
+* eILCD is the only format really battle tested with multiple implementations and use in a variety of contexts
 * eILCD is the transfer format for GLAD and PEF
-* eILCD is extensively documented, both with XSD and guidance
+* eILCD is extensively documented, both with XSD files and guidance
 
-Don't get the wrong impression, eILCD is everything you hate about XML, but arguably even worse as it was mostly designed by scientists instead of programmers.
+Don't get the wrong impression, eILCD is everything you hate about XML, but arguably even worse than usual as it was mostly designed by scientists instead of programmers. But it is still better than the alternatives.
 
-The hardest part are the API endpoints. These are the Python methods or functions which programs can use to interface with any database backend that follow the Brightway common database standard; database implementors can choose to only support part of this standard, but we should define this standard in a parsimonious fashion, such that open source implementations choose to implement the whole standard.
+The hardest part are the API endpoints. These are Python methods or functions which programs can use to interface with any database backend that follow the Brightway common database standard; database implementors can choose to only support part of this standard, but we should define this standard in a parsimonious fashion, such that open source implementations do choose to implement the whole standard.
 
 Based on the current default database backend, the following CRUD endpoints should be considered:
 
-* Node
-* Edge
+* Node (Can be called activity or process)
+* Edge (Can be called exchange)
 * Impact category
 * Characterization factor
 
@@ -62,14 +61,15 @@ After finishing this section, programmers will be able to choose whatever databa
 
 Specific tasks:
 
-* Adapt eILCD to standard Python data structures. Any deviations from eILCD nomenclature or structures must be documented and justified.
-* Design a set of Python signals to be emitted by database backends on CRUD operations. This is needed for search indices or other integrated platforms.
-* Specify and provide reference implementation of Brightway Common Database standard
-* Port `bw2data` to the standard as `bw_data`
+* B1 Choose, document, and justify the data structures used for passing data following the common API.
+* B2 Adapt eILCD to a standard Python data structures. Any deviations from eILCD nomenclature or structures must be documented and justified.
+* B3 Design a set of Python signals to be emitted by database backends on CRUD operations. This is needed for search indices or other integrated platforms. Follow Activity Browser signals when possible to maximize compatibility.
+* B4 Specify and provide a reference implementation of the Brightway Common Database standard
+* B5 Port `bw2data` to the standard as `bw_data`
 
 Nice-to-have:
 
-* Reference implementation against a different type of database
+* B6 Reference common database implementation against a different type of database (e.g. graph database)
 
 ## Smaller `bw2data` updates
 
@@ -79,9 +79,9 @@ Projects as separate subdirectories is not a useful concept for all databases or
 
 Specific tasks:
 
-* Separate project handling into a separate library
-* Adapt testing framework to not rely on projects
-* Provide separate test decorators for backends which do and do not use the projects concept
+* C1 Separate project handling into a separate library
+* C2 Adapt testing framework to not rely on projects
+* C3 Provide separate test decorators for backends which do and do not use the projects concept
 
 ### Switch all data storage in `bw2data` to SQLite
 
@@ -89,30 +89,66 @@ We now have an evil mix of pickle files, JSON files, and SQLite databases. It is
 
 Specific tasks:
 
-* Migrate all data storage in `bw2data` to SQLite databases.
+* D1 Migrate all data storage in `bw2data` to SQLite databases.
 
 Nice-to-have:
 
-* Use the SQLite text search instead of a separate Whoosh search index.
+* D2 Use the SQLite text search instead of a separate Whoosh search index.
 
-## ILCD as standard interface between `bw_data` and `bw_io`
+## eILCD as standard interface between `bw_data` and `bw_io`
 
 The current interface between `bw2data` and `bw2io` is inadequate - it does not include a lot of important metadata, it grew organically without clear design or vision, it doesn't not distinguish between inventory and impact assessment, and it barely specified and therefore impossible to implement by outside collaborators.
 
 Specific tasks:
 
-* `bw_io` needs to to support the Brightway Common Database standard
-* `bw_io` strategies need to be rewritten to use the ported ILCD data standard internally. Probably it makes sense to first have a single wrapping decorator and then port individual strategies when possible.
+* E1 `bw_io` needs to to support the Brightway Common Database standard
+* E2 Python decorator to use old-style `bw_io` strategies without converting internal logic to ILCD data standard
 
-## Contributing
+Nice-to-have:
 
-A more decoupled organization of the Brightway 3 libraries should make (new) contributions easier.
+* E3 `bw_io` strategies rewritten to use the ported ILCD data standard internally
+* E4 Code audit of `bw_io`
 
-### Homogeneous contributing guidelines
+## Infrastructure
 
-A "Brightway 3 Contributing guidelines" will be part of the documentation.
-Repositories of the Brightway 3 guidelines will point to this guidelines or have a customized version of it in the repository.
+### Documentation
+
+Documentation needs to be reworked and improved. A more decoupled organization of the Brightway 3 libraries should also make (new) contributions easier.
+
+Specific tasks:
+
+* F1 Develop new Sphinx template with a [three column layout](https://github.com/Depart-de-Sentier/Prizes/issues/2#issuecomment-1077682124)
+* F2 Follow the [Diataxis framework](https://diataxis.fr/) for technical documentation
+* F3 Each notebook (where possible) should link to a *try.brightway.dev* container
+* F4 Develop, document, and test contribution guidelines and coding styles, and apply to all libraries
 
 ### Homogeneous build, test and deploy metrics
 
-The repositories of code for Brightway 3 colre libraries will have the same building, deploying and testing infrastructure and badges on the README.
+The repositories of code for Brightway 3 core libraries will have the same building, deploying and testing infrastructure and badges on the README.
+
+Specific tasks:
+
+* G1 Make sure each Brightway library uses the latest Azure CI images and testing strategies
+* G2 Write script or guide so that future changes in testing can be easily ported to multiple libraries
+
+## Governance
+
+An important part of Brightway maturing is a formal decision making process for making changes to and prioritizing development in Brightway. To that end, we will:
+
+* H1 Create a structured process for making breaking changes or adding major features to Brightway (see the [proposal template](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0001-bep-template.md)), based on Python enhancement proposals.
+* H2 Create a Steering Committee which will vote on BEPs
+* H3 Create a Brightway Users Group as a formal forum to provide feedback from Brightway users and key stakeholders
+
+[Départ de Sentier](https://www.d-d-s.ch/) (DdS) will manage the Steering Committee and Users Group. Managing the Brightway project, and organizing the Brightcon conference, are two core activities of DdS.
+
+## Dependency graph
+
+Not all tasks can be done simultaneously. The follow chart shows the needed order of operations:
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
