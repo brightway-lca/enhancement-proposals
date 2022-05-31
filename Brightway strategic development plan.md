@@ -147,8 +147,19 @@ Not all tasks can be done simultaneously. The follow chart shows the needed orde
 
 ```mermaid
   graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+
+  subgraph bw_calc
+    A1 --> A2
+    A2 --> A6
+    A2 --> A3
+    A4 --> A5
+  end
+
+  subgraph common_api
+    B1 --> B2
+    B2 --> B4
+    B3
+    B2 --> B5
+    B5 --> B6
+  end
 ```
