@@ -197,7 +197,7 @@ Not all tasks can be done simultaneously. The follow chart shows the needed orde
 
   subgraph infrastructure
     G1 --> G2
-    G2 -> G3
+    G2 --> G3
     G4
   end
 
