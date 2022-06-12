@@ -75,7 +75,7 @@ Nice-to-have:
 
 ## Smaller `bw2data` updates
 
-### Make `projects` optional
+### [Make `projects` optional](https://github.com/brightway-lca/brightway2-data/issues/97)
 
 Projects as separate subdirectories is not a useful concept for all databases or organizations. Rather, they are an implementation detail of the current database backend structure (separate SQLite databases in subdirectories).
 
@@ -85,7 +85,7 @@ Specific tasks:
 * C2 Adapt testing framework to not rely on projects
 * C3 Provide separate test decorators for backends which do and do not use the projects concept
 
-### Switch all data storage in `bw2data` to SQLite
+### [Switch all data storage in `bw2data` to SQLite](https://github.com/brightway-lca/brightway2-data/issues/101)
 
 We now have an evil mix of pickle files, JSON files, and SQLite databases. It is very, very dumb. The original justification was that loading 500.000 locations codes (during regionalized LCA) was much faster in one file than a big database query, and JSON allowed configurations to be edited without having to know how to use a relational database. These reasons are inadequate.
 
@@ -97,7 +97,7 @@ Nice-to-have:
 
 * D2 Use the SQLite text search instead of a separate Whoosh search index.
 
-## eILCD as standard interface between `bw_data` and `bw_io`
+## [eILCD as standard interface between `bw_data` and `bw_io`](https://github.com/brightway-lca/enhancement-proposals/issues/11)
 
 The current interface between `bw2data` and `bw2io` is inadequate - it does not include a lot of important metadata, it grew organically without clear design or vision, it doesn't not distinguish between inventory and impact assessment, and it barely specified and therefore impossible to implement by outside collaborators.
 
@@ -135,7 +135,7 @@ Specific tasks:
 * G3 Create example project from the example template
 * G4 Have regular checks to ensure that all Brightway libraries work correctly as dependent libraries evolve
 
-## Governance
+## [Governance](https://github.com/brightway-lca/enhancement-proposals/issues/18)
 
 An important part of Brightway maturing is a formal decision making process for making changes to and prioritizing development in Brightway. To that end, we will:
 
