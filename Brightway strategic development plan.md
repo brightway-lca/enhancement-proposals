@@ -128,8 +128,10 @@ The repositories of code for Brightway 3 core libraries will have the same build
 
 Specific tasks:
 
-* G1 Make sure each Brightway library uses the latest Azure CI images and testing strategies
-* G2 Write script or guide so that future changes in testing can be easily ported to multiple libraries
+* G1 Make `cookiecutter` template that satisfies the required attributes
+* G2 Document use of this template, both for new library creation and for updating libraries
+* G3 Create example project from the example template
+* G4 Have regular checks to ensure that all Brightway libraries work correctly as dependent libraries evolve
 
 ## Governance
 
@@ -193,6 +195,8 @@ Not all tasks can be done simultaneously. The follow chart shows the needed orde
 
   subgraph infrastructure
     G1 --> G2
+    G2 -> G3
+    G4
   end
 
   infrastructure --> bw_calc
