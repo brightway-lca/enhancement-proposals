@@ -18,7 +18,9 @@ Brightway 3 needs to satisfy these key user needs:
 * Use alternative databases and schemas
 * Use IO without other Brightway components as part of an ETL pipeline
 
-## Separate `bw_calc`
+The plan is being managed as a [Github project](https://github.com/orgs/brightway-lca/projects/2/views/1)
+
+## [Separate `bw_calc`](https://github.com/brightway-lca/enhancement-proposals/issues/2)
 
 This is already quite advanced. Specific tasks:
 
@@ -32,7 +34,7 @@ Nice-to-have:
 * A5 Web API (e.g. Flask app) for running calculations, with rate-limited implementation on DdS server
 * A6 Provide support and specification for multiple impact categories in one calculation (`MultiLCA`)
 
-## Brightway Common Database API
+## [Brightway Common Database API](https://github.com/brightway-lca/enhancement-proposals/issues/4)
 
 One big barrier to adapting Brightway to other databases is its tight coupling between projects, the default database backend, and the IO library. To decouple these, we first need to define *data formats*, *interfaces*, and *endpoints*.
 
@@ -111,7 +113,7 @@ Nice-to-have:
 
 ## Infrastructure
 
-### Documentation
+### [Documentation](https://github.com/brightway-lca/brightway2/issues/36)
 
 Documentation needs to be reworked and improved. A more decoupled organization of the Brightway 3 libraries should also make (new) contributions easier.
 
@@ -122,7 +124,7 @@ Specific tasks:
 * F3 Each notebook (where possible) should link to a *try.brightway.dev* container
 * F4 Develop, document, and test contribution guidelines and coding styles, and apply to all libraries
 
-### Homogeneous build, test and deploy metrics
+### [Homogeneous build, test and deploy metrics](https://github.com/brightway-lca/enhancement-proposals/issues/3)
 
 The repositories of code for Brightway 3 core libraries will have the same building, deploying and testing infrastructure and badges on the README.
 
