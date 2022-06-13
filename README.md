@@ -6,7 +6,7 @@ A Brightway Enhancement Proposal (BEP) is a formal decision-making system adapte
 
 | Number | Status | Title |
 | ------ | ------ | ----- |
-| 1 | Accepted | BEP template |
+| 1 | Proposed | BEP template |
 
 ## License
 
