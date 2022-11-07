@@ -129,6 +129,7 @@ Work on the prototypes will continue until they are deemed ready for review by t
 
 ## Discussion
 
+ - [BEP-0003 Discussion on GitHub](https://github.com/brightway-lca/enhancement-proposals/discussions/21)
  - The [Gitter `documentation` channel](https://gitter.im/brightway-lca/documentation)
  - [F1-F4 of the Strategic Development Plan](https://github.com/brightway-lca/enhancement-proposals/blob/main/Brightway%20strategic%20development%20plan.md#documentation)
  - The [Brightcon 2022](http://web.archive.org/web/20220928071701/https://2022.brightcon.link/) Hackathon, with results of the brainstorming sessions documented in [#10 Improve Brightway Documentation](https://github.com/brightway-lca/hackathons/issues/10)
