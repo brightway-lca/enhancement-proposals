@@ -67,10 +67,10 @@ See beginning of document.
 
 ## Discussion
 
+* [BEP-0002 Discussion on GitHub](https://github.com/brightway-lca/enhancement-proposals/discussions/23)
+  
 Previously proposed (unfortunately not discussed) in:
 * https://brightway.groups.io/g/development/message/61
-
-Comments and amendments per PR, github issues or brightway developer mail list are welcome.
 
 ## Previous Versions
 
