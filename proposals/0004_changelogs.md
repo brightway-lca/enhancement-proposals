@@ -7,14 +7,14 @@
 | Status | Draft |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch) |
-| Editor | [Chris Mutel](mailto:cmutel@gmail.com) |
+| Editor | [Tomas Navarrete Gutierrez](mailto:) |
 | Created | 2022-11-14 |
-| Last updated | 2022-11-14 |
-| Version | 1 |
+| Last updated | 2022-11-28 |
+| Version | 2 |
 
 ## Abstract
 
-In order for the new documentation (compare [BEP-0003](https://github.com/brightway-lca/enhancement-proposals/blob/ca80e219917ed612f74936fd7f7e60cb3ee1b2eb/proposals/0003_documentation.md)) to provide users with a single place to get information on "what's new" with Brightway, every Brightway repository (including the below listed) shall include a `CHANGELOG.rst` file. The file content shall adhere to best practives laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project.
+In order for the new documentation (compare [BEP-0003](https://github.com/brightway-lca/enhancement-proposals/blob/ca80e219917ed612f74936fd7f7e60cb3ee1b2eb/proposals/0003_documentation.md)) to provide users with a single place to get information on "what's new" with Brightway, every Brightway repository (including the below listed) shall include a `CHANGELOG.md` markdown file. The file content shall adhere to best practives laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project.
 
 ## Motivation
 
@@ -35,10 +35,10 @@ Clearly explain why the existing specifications is inadequate to address the pro
 
 ## Proposal
 
-Every Brightway repository shall include a changelog file according to the naming convention (path relative to project root): 
+Every Brightway repository shall include a changelog file (Markdown format) named according to the convention (path relative to project root): 
 
 ```
-/CHANGELOG.rst
+/CHANGELOG.md
 ```
 
 The content shall adhere to the best practices laid out by the [_keep a changelog_](https://keepachangelog.com/en/1.0.0/) project:
@@ -60,7 +60,20 @@ Removed for now removed features. \
 Fixed for any bug fixes. \
 Security in case of vulnerabilities.
 
-For a style guide, compare the _keep a changelog_ [`CHANGELOG.md`](https://raw.githubusercontent.com/olivierlacan/keep-a-changelog/main/CHANGELOG.md)
+For a style guide, compare the _keep a changelog_ [`CHANGELOG.md`](https://raw.githubusercontent.com/olivierlacan/keep-a-changelog/main/CHANGELOG.md). In the context of Brightway development, this means:  
+
+Every changelog entry for a major release (full bump in version number) must:
+
+1. include the version number of the corresponding release
+1. include a full text description of the changes, in addition to:
+2. a list of individual changes, which:
+3. link to relevant GitHub issues (e.g. `#1`, `#2`)
+
+Every changelog entry for a minor release (no full bump in version numver) must:
+
+1. include the version number of the corresponding release
+2. include a list of individual changes, which:
+3. link to relevant GitHub issues (e.g. `#1`, `#2`)
 
 ### Rationale
 
@@ -77,7 +90,7 @@ Maintain status quo, do not include changelog information in the documentation w
 
 ### Open Issues
 
-- [ ] [brightway-documentation#13](https://github.com/brightway-lca/brightway-documentation/issues/13)
+- [X] [brightway-documentation#13](https://github.com/brightway-lca/brightway-documentation/issues/13)
 
 ### Non-Goals
 
@@ -94,3 +107,7 @@ The prototype of [documentation.brightway.dev](https://documentation.brightway.d
 * The Brightway development discussion list, tagged with [#BEP0004]
 * Issues in the respective repositories:
    - [brightway-lca/brightway-documentation](https://github.com/brightway-lca/brightway-documentation/issues/13)
+
+## Previous Versions
+
+ - Version 1 (unpublished, compare PR)
