@@ -7,10 +7,9 @@
 | Status | Draft |
 | Type | Guidelines |
 | Proposed By | [Chris Mutel](mailto:chris.mutel@gmail.com), [Romain Sacchi](mailto:r_s@me.com) |
-| Editor | [Romain Sacchi](mailto:r_s@me.com) |
 | Created | 2022-05-28 |
-| Last updated | 2022-05-28 |
-| Version | 1 |
+| Last updated | 2022-12-07 |
+| Version | 2 |
 
 ## Abstract
 
@@ -59,7 +58,7 @@ The BEP header table should contain the following:
 * Number: Integer number, also used in the filename. Self-assigned ascending integers starting from 1.
 * Title: This is the title of the BEP. Keep it simple and descriptive.
 * Status: One of:
-    * draft: Incomplete proposal being worked on by the authors and editor
+    * draft: Incomplete proposal being worked on by the authors
     * proposed: Complete proposal open for discussion by the community, or being voted on
     * deferred: Complete proposal not currently under public discussion
     * accepted
@@ -70,7 +69,6 @@ The BEP header table should contain the following:
     * Software features: Describes a new feature or implementation for Brightway.
     * Guidelines: Provides general guidelines or information to the Brightway community, but does not propose a new feature.
 * Proposed by: Name and email of proposer
-* Editor: Name and email of editor
 * Created: Date in YYYY-MM-DD format
 * Last updated: Date in YYYY-MM-DD format
 * Version: Ascending integer number starting from 1
@@ -89,7 +87,7 @@ A procedure to implement/reject modifications to the BEP shall be mentioned in t
 * BEP result of working groups already reflect some level of consensus, and will have a history of how the specifics came to be. In this case, the author will mention that the group is the primary and preliminary place for discussing the proposal, before it is made public.
 * Once the BEP is public, the authors should publicly respond to suggested changes by either accepting the changes, or providing their reasons to reject the suggested changes.
 * If discussion is particularly heated, the authors may invite changes via pull request which would be discussed by the community. To avoid voting overload, this procedure should only be used in special cases.
-* Alternatively, the authors or the editor may invite dissenting discussion participants to phone or in-person conferences to reach consensus on difficult issues.
+* Alternatively, the authors may invite dissenting discussion participants to phone or in-person conferences to reach consensus on difficult issues.
 
 ## Previous Versions
 
