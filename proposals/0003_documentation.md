@@ -7,7 +7,6 @@
 | Status | Draft |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch), [Chris Mutel](mailto:cmutel@gmail.com) |
-| Editor |  |
 | Created | 2022-10-09 |
 | Last updated | 2022-10-09 |
 | Version | 1 |
