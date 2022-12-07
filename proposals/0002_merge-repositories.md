@@ -7,7 +7,6 @@
 | Status | Draft |
 | Type | Software features |
 | Proposed By | [Benjamin W. Portner](mailto:benjamin.portner@bauhaus-luftfahrt.net) |
-| Editor | [Benjamin W. Portner](mailto:benjamin.portner@bauhaus-luftfahrt.net) |
 | Created | 2022-07-19 |
 | Last updated | 2022-07-19 |
 | Version | 0.0.1 |
