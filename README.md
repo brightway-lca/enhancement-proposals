@@ -6,7 +6,10 @@ A Brightway Enhancement Proposal (BEP) is a formal decision-making system adapte
 
 | Number | Status | Title |
 | ------ | ------ | ----- |
-| 1 | Proposed | BEP template |
+| 1 | Proposed | [BEP template](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0001_bep-template.md) |
+| 2 | Draft | [Merge repositories](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0002_merge-repositories.md) |
+| 3 | Draft | [Brightway Documentation](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0003_documentation.md) |
+| 4 | Draft | [Changelog Files for Releases](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0004_changelogs.md) |
 
 ## License
 
