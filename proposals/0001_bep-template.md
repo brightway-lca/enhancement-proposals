@@ -79,8 +79,8 @@ The BEP header table should contain the following:
 
 Link to the GitHub Discussion for this BEP here. Also add a comprehensive bullet list of links to where the BEP has been discussed by the community, such as the Brightway developers mailing list, and Github pull requests and issues. For example:
 
-* [BEP-0001 Discussion on GitHub](https://github.com/brightway-lca/enhancement-proposals/discussions/01)
-* The Brightway development discussion list, tagged with [#BEP0001](TODO)
+* BEP-0001 Discussion on GitHub
+* The Brightway development discussion list, tagged with `#BEP0001`
 
 A procedure to implement/reject modifications to the BEP shall be mentioned in the proposal. Depending on the type of BEP, examples can be one or more of the following options:
 
