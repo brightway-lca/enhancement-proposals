@@ -76,6 +76,10 @@ Examples databases for one-click installs:
 
 None
 
+## Miscelaneous 
+
+BS: The current situation with the bw2io package is an example of data being tightly integrated to code in Brightway. ActivityBrowser user and devs would prefer to have a means to install many different biosphere databases in one same project. Another option would be to have one huge biosphere database with **all** flows (past and present).
+
 ## Next steps
 
 * CM: Email to Ben Portner about 0001 feedback
