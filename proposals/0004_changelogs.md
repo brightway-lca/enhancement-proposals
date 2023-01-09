@@ -4,21 +4,21 @@
 | - | - |
 | Number | 4 |
 | Title | Changelogs for Brightway Packages |
-| Status | Draft |
+| Status | Proposed |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch) |
-| Editor | [Tomas Navarrete Gutierrez](mailto:) |
+| Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
 | Created | 2022-11-14 |
-| Last updated | 2022-11-28 |
-| Version | 2 |
+| Last updated | 2023-01-09 |
+| Version | 3 |
 
 ## Abstract
 
-In order for the new documentation (compare [BEP-0003](https://github.com/brightway-lca/enhancement-proposals/blob/ca80e219917ed612f74936fd7f7e60cb3ee1b2eb/proposals/0003_documentation.md)) to provide users with a single place to get information on "what's new" with Brightway, every Brightway repository (including the below listed) shall include a `CHANGELOG.md` markdown file. The file content shall adhere to best practives laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project.
+In order for the new documentation (compare [BEP-0003](https://github.com/brightway-lca/enhancement-proposals/blob/ca80e219917ed612f74936fd7f7e60cb3ee1b2eb/proposals/0003_documentation.md)) to provide users with a single place to get information on "what's new" with Brightway, every Brightway repository (including the below listed) shall include a `CHANGES.md` markdown file. The file content shall adhere to best practices laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project and conform to [Semantic Versioning > 2.0.0](https://semver.org/).
 
 ## Motivation
 
-Clearly explain why the existing specifications is inadequate to address the problem that the BEP solves
+Currently, there is no way for users to obtain information on feature changes and bug fixes from the documentation website. Instead, they need to check for every package by comparing the (differently named) changelog files in the respective GitHub repositories.
 
 | repo | changelog file URL |
 | ---- | ------------------ |
@@ -32,10 +32,11 @@ Clearly explain why the existing specifications is inadequate to address the pro
 | `regional` | https://github.com/brightway-lca/brightway2-regional/blob/master/CHANGES.md |
 | `regional` | https://github.com/brightway-lca/bw_migrations/blob/master/CHANGELOG.md |
 
+Unifying the file names, syntax and best practices will enable these changelog files to be included in the new Brightway documentation.
 
 ## Proposal
 
-Every Brightway repository shall include a changelog file (Markdown format) named according to the convention (path relative to project root): 
+Every Brightway repository shall include a changelog file (Markdown `.md` format) named according to the convention (path relative to project root): 
 
 ```
 /CHANGELOG.md
@@ -74,6 +75,15 @@ Every changelog entry for a minor release (no full bump in version numver) must:
 1. include the version number of the corresponding release
 2. include a list of individual changes, which:
 3. link to relevant GitHub issues (e.g. `#1`, `#2`)
+
+In addition, the version numbers shall adhere to [Semantic Versioning](https://semver.org/):
+
+> Given a version number MAJOR.MINOR.PATCH, increment the: \
+> \
+MAJOR version when you make incompatible API changes\
+MINOR version when you add functionality in a backwards compatible manner\
+PATCH version when you make backwards compatible bug fixes\
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.\
 
 ### Rationale
 

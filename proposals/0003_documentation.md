@@ -4,13 +4,13 @@
 | - | - |
 | Number | 3 |
 | Title | Brightway Documentation |
-| Status | Draft |
+| Status | Proposed |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch), [Chris Mutel](mailto:cmutel@gmail.com) |
-| Editor |  |
+| Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
 | Created | 2022-10-09 |
-| Last updated | 2022-10-09 |
-| Version | 1 |
+| Last updated | 2023-01-09 |
+| Version | 4 |
 
 ## Abstract
 
@@ -137,6 +137,7 @@ Work on the prototypes will continue until they are deemed ready for review by t
    - [brightway-lca/brightway-training](https://github.com/brightway-lca/brightway-training)
    - [brightway-lca/brightway-documentation](https://github.com/brightway-lca/brightway-documentation)
 
+Compare also the [Development Meeting Minutes](https://github.com/brightway-lca/brightway-documentation/discussions/31) in the `brightway-documentation` repo.
 
 ## Previous Versions
 
