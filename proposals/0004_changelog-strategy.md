@@ -10,7 +10,7 @@
 | Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
 | Created | 2022-11-14 |
 | Last updated | 2023-12-13 |
-| Version | 3 |
+| Version | 4 |
 
 ## Abstract
 
