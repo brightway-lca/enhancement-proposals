@@ -4,21 +4,21 @@
 | - | - |
 | Number | 4 |
 | Title | Changelogs for Brightway Packages |
-| Status | Proposed |
+| Status | Accepted |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch) |
 | Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
 | Created | 2022-11-14 |
-| Last updated | 2023-01-09 |
-| Version | 3 |
+| Last updated | 2023-12-13 |
+| Version | 4 |
 
 ## Abstract
 
-In order for the new documentation (compare [BEP-0003](https://github.com/brightway-lca/enhancement-proposals/blob/ca80e219917ed612f74936fd7f7e60cb3ee1b2eb/proposals/0003_documentation.md)) to provide users with a single place to get information on "what's new" with Brightway, every Brightway repository (including the below listed) shall include a `CHANGES.md` markdown file. The file content shall adhere to best practices laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project and conform to [Semantic Versioning > 2.0.0](https://semver.org/).
+In order for the new documentation (compare BEP-0003) to provide users with a single place to get information on _"what's new"_ with Brightway, every Brightway repository (including the below listed) shall include a `CHANGES.md` markdown file. The file content shall adhere to best practices laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project and conform to [Semantic Versioning > 2.0.0](https://semver.org/).
 
 ## Motivation
 
-Currently, there is no way for users to obtain information on feature changes and bug fixes from the documentation website. Instead, they need to check for every package by comparing the (differently named) changelog files in the respective GitHub repositories.
+[Prior to](https://web.archive.org/web/20200716020925/https://brightway.dev/) the [update of the documentation](https://github.com/brightway-lca/brightway-documentation/milestones?state=closed) in 2022/2023, there was no way for users to obtain information on feature changes and bug fixes from the documentation website. Instead, they needed to check for every package by comparing the (differently named) changelog files in the respective GitHub repositories:
 
 | repo | changelog file URL |
 | ---- | ------------------ |
@@ -36,10 +36,10 @@ Unifying the file names, syntax and best practices will enable these changelog f
 
 ## Proposal
 
-Every Brightway repository shall include a changelog file (Markdown `.md` format) named according to the convention (path relative to project root): 
+Every Brightway repository shall include a changelog file (Markdown `.md` format) named (path relative to project root): 
 
 ```
-/CHANGELOG.md
+/CHANGES.md
 ```
 
 The content shall adhere to the best practices laid out by the [_keep a changelog_](https://keepachangelog.com/en/1.0.0/) project:
@@ -87,16 +87,17 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ### Rationale
 
-Unless [BEP-0002](https://github.com/brightway-lca/enhancement-proposals/blob/ca80e219917ed612f74936fd7f7e60cb3ee1b2eb/proposals/0002_merge-repositories.md) is accepted, the various Brightway packages will be maintained as separate repositories. To ensure the Sphinx documentation is able to pull changelog information from these repositories, they must follow a common naming and formatting convention.
+Unless BEP-0002 is accepted, the various Brightway packages will be maintained as separate repositories. To ensure the Sphinx documentation is able to pull changelog information from these repositories, they must follow a common naming and formatting convention.
 
 ### Pros and Cons
 
-Pros: Uniform formatting and structure across the changelog files of all Brightway packages. Improved readability, improved accountability of developers. Improved accessibility by end-users. \
+Pros: Uniform formatting and structure across the changelog files of all Brightway packages. Improved readability, improved accountability of developers. Improved accessibility by end-users.
+
 Cons: None
 
 ### Alternatives
 
-Maintain status quo, do not include changelog information in the documentation website.
+Maintain status quo, include changelogs in the documentation but without a common naming and formatting convention.
 
 ### Open Issues
 
@@ -120,4 +121,7 @@ The prototype of [documentation.brightway.dev](https://documentation.brightway.d
 
 ## Previous Versions
 
- - Version 1 (unpublished, compare PR)
+ - [Version 1](https://github.com/brightway-lca/enhancement-proposals/blob/2d904c1e457ad589c2e2ea7d2434c7d360989a0f/proposals/0004_changelogs.md)
+ - [Version 2](https://github.com/brightway-lca/enhancement-proposals/blob/662bd104ba8c83e313b966a9c5893b2e3c95376a/proposals/0004_changelogs.md)
+ - [Version 3](https://github.com/brightway-lca/enhancement-proposals/blob/a3043a12d1e50f27dc7c809ca50e0dd76e909381/proposals/0004_changelogs.md)
+ - Version 4 (this version)
