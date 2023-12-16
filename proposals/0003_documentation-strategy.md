@@ -4,7 +4,7 @@
 | - | - |
 | Number | 3 |
 | Title | Brightway Documentation |
-| Status | Proposed |
+| Status | Accepted |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch), [Chris Mutel](mailto:cmutel@gmail.com) |
 | Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
