@@ -4,7 +4,7 @@
 | - | - |
 | Number | 5 |
 | Title | Support for multifunctional processes |
-| Status | Proposed |
+| Status | Draft |
 | Type | Guidelines |
 | Proposed By | [Chris Mutel](mailto:cmutel@gmail.com) |
 | Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
@@ -20,7 +20,7 @@ A new library `bw_multifunctional` will implement this functionality. `bw2data` 
 
 ## Motivation
 
-Multifunctional processes normally produce non-square technosphere matrices, as the number of products if higher than the number of processes. In order to create square technosphere matrices and solve the inventory linear algebra problem, strategies such as substitution or allocation must be applied.
+Multifunctional processes normally produce non-square technosphere matrices, as the number of products is higher than the number of processes. In order to create square technosphere matrices and solve the inventory linear algebra problem, strategies such as substitution or allocation must be applied.
 
 ## Proposal
 
