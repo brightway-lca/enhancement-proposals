@@ -16,7 +16,7 @@
 
 A new process type "multifunctional" is introduced. Multifunctional processes are kept as multifunctional in the database, and are only turned into single-output unit processes when processed into datapackages. This approach allows for multiple allocation strategies to be applied and stored as numpy arrays.
 
-A new library `bw_multifunctional` will implement this functionality. `bw2data` will be modified to emit a [Blinker signal](https://blinker.readthedocs.io/en/stable/), and `bw_multifunctional` will create a new group  in the same datapackage (the default allocation strategy), and optionally a new datapackage with the complete set of allocation possibilities. The configuration options controlling this behaviour will be stored per database.
+A new library `bw_multifunctional` will implement this functionality. `bw2data` will be modified to emit a [Blinker signal](https://blinker.readthedocs.io/en/stable/), and `bw_multifunctional` will create a new group  in the same datapackage (the default allocation strategy), and optionally a new array datapackage with the complete set of allocation possibilities. The configuration options controlling this behaviour will be stored per database.
 
 ## Motivation
 
